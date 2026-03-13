@@ -1,0 +1,96 @@
+# Simsa (심사) — .gitignore
+# Base: Node + Ionic/Vue/Vite/TypeScript additions
+
+# Dependencies
+node_modules/
+jspm_packages/
+
+# Build output
+dist/
+dist-ssr/
+dev-dist/
+build/
+
+# Vite
+*.local
+.vite/
+
+# PWA
+sw.js
+workbox-*.js
+
+# Capacitor
+/android/
+/ios/
+.capacitor/
+capacitor.config.json.bak
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+*.lcov
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Claude
+CLAUDE.md
+
+# Analytics (not committed — site-specific tracking)
+public/analytics.js
+
+# Optional: npm cache
+.npm
+.eslintcache
+.stylelintcache
+
+# Optional: yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*

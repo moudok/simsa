@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="description" content="Simsa (심사) — Application PWA de notation pour passages de grades de taekwondo. 100% hors ligne, bilingue FR/한국어." />
+    <meta name="keywords" content="taekwondo, passage de grades, notation, PWA, 태권도, 승급심사" />
+    <meta name="author" content="Moudok" />
+    <meta property="og:title" content="Simsa — 심사" />
+    <meta property="og:description" content="Application PWA de notation pour passages de grades de taekwondo. 100% hors ligne." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://simsa.moudok.fr/" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="ko_KR" />
+    <meta property="og:image" content="https://simsa.moudok.fr/og-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192x192.png" />
+    <link rel="apple-touch-icon" href="/icons/icon-512x512.png" />
+    <title>Simsa — 심사 · Passage de grades de taekwondo</title>
+    <script>
+      // Load analytics only in browser mode (not installed PWA)
+      if (!window.matchMedia('(display-mode: standalone)').matches && !navigator.standalone) {
+        var s = document.createElement('script');
+        s.src = '/analytics.js';
+        s.async = true;
+        document.head.appendChild(s);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

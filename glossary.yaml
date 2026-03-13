@@ -1,0 +1,234 @@
+# Taekwondo Glossary for Simsa application
+# Revised Romanization of Korean (National Institute of Korean Language, 2000)
+
+terms:
+
+  # ── Commands / Commandements ───────────────────────────────────────────────
+  - latin: "Charyeot"             # attention / garde-à-vous
+    hangul: "차렷"
+  - latin: "Geuman"               # stop / arrêter
+    hangul: "그만"
+  - latin: "Junbi"                # prêt
+    hangul: "준비"
+  - latin: "Kihap"                # cri martial
+    hangul: "기합"
+  - latin: "Sijak"                # commencer
+    hangul: "시작"
+  - latin: "Swieo"                # repos
+    hangul: "쉬어"
+
+  # ── General / Général ─────────────────────────────────────────────────────
+  - latin: "Dobok"                # tenue de pratique
+    hangul: "도복"
+  - latin: "Dojang"               # salle d'entraînement
+    hangul: "도장"
+  - latin: "Kwanjang-nim"         # grand maître
+    hangul: "관장님"
+  - latin: "Kyeong-nye"           # salut / révérence
+    hangul: "경례"
+  - latin: "Sabom-nim"            # maître / enseignant
+    hangul: "사범님"
+  - latin: "Taekwondo"            # voie du pied et du poing
+    hangul: "태권도"
+  - latin: "Tti"                  # ceinture
+    hangul: "띠"
+
+  # ── Training / Entraînement ───────────────────────────────────────────────
+  - latin: "Junbi Undong"         # échauffement
+    hangul: "준비 운동"
+  - latin: "Kibon"                # fondamentaux / exercices de base
+    hangul: "기본"
+  - latin: "Yeonsup"              # entraînement / pratique
+    hangul: "연습"
+  - latin: "Jeongni Undong"       # retour au calme
+    hangul: "정리 운동"
+
+  # ── Stances / Positions ───────────────────────────────────────────────────
+  - latin: "Ap Seogi"             # position avant courte
+    hangul: "앞 서기"
+  - latin: "Ap Kubi"              # position avant longue
+    hangul: "앞 굽이"
+  - latin: "Beom Seogi"           # position du tigre
+    hangul: "범 서기"
+  - latin: "Dwit Kubi"            # position arrière
+    hangul: "뒤 굽이"
+  - latin: "Gyeorugi Junbi"       # position de combat
+    hangul: "겨루기 준비"
+  - latin: "Juchum Seogi"         # position du cavalier
+    hangul: "주춤 서기"
+  - latin: "Koa Seogi"            # position croisée
+    hangul: "꼬아 서기"
+  - latin: "Moa Seogi"            # position pieds joints
+    hangul: "모아 서기"
+  - latin: "Narani Seogi"         # position parallèle
+    hangul: "나란히 서기"
+
+  # ── Target Zones / Zones cibles ───────────────────────────────────────────
+  - latin: "Arae"                 # bas / partie basse
+    hangul: "아래"
+  - latin: "Eolgul"               # visage / tête
+    hangul: "얼굴"
+  - latin: "Momtong"              # tronc / corps
+    hangul: "몸통"
+
+  # ── Hand & Fist Surfaces / Surfaces de frappe (main et poing) ─────────────
+  - latin: "Batangson"            # paume de main
+    hangul: "바탕손"
+  - latin: "Deung Jumeok"         # dos du poing
+    hangul: "등주먹"
+  - latin: "Jumeok"               # poing
+    hangul: "주먹"
+  - latin: "Mejumeok"             # poing en marteau
+    hangul: "메주먹"
+  - latin: "Palkup"               # coude
+    hangul: "팔굽"
+  - latin: "Palmok"               # avant-bras
+    hangul: "팔목"
+  - latin: "Son"                  # main
+    hangul: "손"
+  - latin: "Sonnal"               # tranchant de main
+    hangul: "손날"
+
+  # ── Foot Surfaces / Surfaces de frappe (pied) ─────────────────────────────
+  - latin: "Ap Chuk"              # plante du pied (talon antérieur)
+    hangul: "앞축"
+  - latin: "Baldung"              # dos du pied
+    hangul: "발등"
+  - latin: "Balnal"               # tranchant du pied
+    hangul: "발날"
+  - latin: "Dwikkumchi"           # talon
+    hangul: "뒤꿈치"
+
+  # ── Generic Techniques / Techniques génériques ────────────────────────────
+  - latin: "Chagi"                # coup de pied (générique)
+    hangul: "차기"
+  - latin: "Chigi"                # frappe (générique)
+    hangul: "치기"
+  - latin: "Jireugi"              # coup de poing (générique)
+    hangul: "지르기"
+  - latin: "Makki"                # blocage (générique)
+    hangul: "막기"
+
+  # ── Blocks / Blocages ─────────────────────────────────────────────────────
+  - latin: "Arae Makki"           # blocage bas
+    hangul: "아래 막기"
+  - latin: "Eolgul Makki"         # blocage haut
+    hangul: "얼굴 막기"
+  - latin: "Eotgeoreo Makki"      # blocage en X
+    hangul: "엇걸어 막기"
+  - latin: "Gawi Makki"           # blocage en ciseaux
+    hangul: "가위 막기"
+  - latin: "Hecho Makki"          # double blocage écarté
+    hangul: "헤쳐 막기"
+  - latin: "Momtong An Makki"     # blocage médian intérieur
+    hangul: "몸통 안 막기"
+  - latin: "Momtong Bakat Makki"  # blocage médian extérieur
+    hangul: "몸통 바깥 막기"
+  - latin: "Sonnal Makki"         # blocage tranchant de main
+    hangul: "손날 막기"
+
+  # ── Hand Strikes / Frappes de poing et de main ────────────────────────────
+  - latin: "Ap Jireugi"           # coup de poing avant
+    hangul: "앞 지르기"
+  - latin: "Batangson Chigi"      # coup de paume
+    hangul: "바탕손 치기"
+  - latin: "Deung Jumeok Chigi"   # coup de dos du poing
+    hangul: "등주먹 치기"
+  - latin: "Mejumeok Chigi"       # coup de poing en marteau
+    hangul: "메주먹 치기"
+  - latin: "Momtong Jireugi"      # coup de poing au corps
+    hangul: "몸통 지르기"
+  - latin: "Palkup Chigi"         # coup de coude
+    hangul: "팔굽 치기"
+  - latin: "Palmok Chigi"         # coup d'avant-bras
+    hangul: "팔목 치기"
+  - latin: "Sonnal Chigi"         # coup de tranchant de main
+    hangul: "손날 치기"
+
+  # ── Kicks / Coups de pied ─────────────────────────────────────────────────
+  - latin: "An Chagi"             # coup de pied intérieur
+    hangul: "안 차기"
+  - latin: "Ap Chagi"             # coup de pied frontal
+    hangul: "앞 차기"
+  - latin: "Bakat Chagi"          # coup de pied extérieur
+    hangul: "바깥 차기"
+  - latin: "Bandal Chagi"         # coup de pied en demi-lune
+    hangul: "반달 차기"
+  - latin: "Dollyo Chagi"         # coup de pied circulaire (roundhouse)
+    hangul: "돌려 차기"
+  - latin: "Dwit Chagi"           # coup de pied arrière
+    hangul: "뒷 차기"
+  - latin: "Dwit Dollyo Chagi"    # coup de pied retourné
+    hangul: "뒤 돌려 차기"
+  - latin: "Gawi Chagi"           # coup de pied en ciseaux
+    hangul: "가위 차기"
+  - latin: "Mireo Chagi"          # coup de pied poussé
+    hangul: "밀어 차기"
+  - latin: "Mureup Chagi"         # coup de genou
+    hangul: "무릎 차기"
+  - latin: "Naeryeo Chagi"        # coup de pied en crochet descendant
+    hangul: "내려 차기"
+  - latin: "Twieo Ap Chagi"       # coup de pied frontal sauté
+    hangul: "뛰어 앞 차기"
+  - latin: "Twieo Dollyo Chagi"   # coup de pied circulaire sauté
+    hangul: "뛰어 돌려 차기"
+  - latin: "Twieo Dwit Chagi"     # coup de pied arrière sauté
+    hangul: "뛰어 뒷 차기"
+  - latin: "Twieo Yeop Chagi"     # coup de pied latéral sauté
+    hangul: "뛰어 옆 차기"
+  - latin: "Yeop Chagi"           # coup de pied latéral
+    hangul: "옆 차기"
+
+  # ── Poomsae — Taegeuk (couleur) ───────────────────────────────────────────
+  - latin: "Poomsae"              # forme / enchaînement codifié
+    hangul: "품새"
+  - latin: "Taegeuk Il Jang"      # poomsae Taegeuk 1er chapitre
+    hangul: "태극 1장"
+  - latin: "Taegeuk I Jang"       # poomsae Taegeuk 2e chapitre
+    hangul: "태극 2장"
+  - latin: "Taegeuk Sam Jang"     # poomsae Taegeuk 3e chapitre
+    hangul: "태극 3장"
+  - latin: "Taegeuk Sa Jang"      # poomsae Taegeuk 4e chapitre
+    hangul: "태극 4장"
+  - latin: "Taegeuk O Jang"       # poomsae Taegeuk 5e chapitre
+    hangul: "태극 5장"
+  - latin: "Taegeuk Yuk Jang"     # poomsae Taegeuk 6e chapitre
+    hangul: "태극 6장"
+  - latin: "Taegeuk Chil Jang"    # poomsae Taegeuk 7e chapitre
+    hangul: "태극 7장"
+  - latin: "Taegeuk Pal Jang"     # poomsae Taegeuk 8e chapitre
+    hangul: "태극 8장"
+
+  # ── Poomsae — Ceinture noire (1er dan → 9e dan) ───────────────────────────
+  - latin: "Koryo"                # poomsae Koryo (1er dan)
+    hangul: "고려"
+  - latin: "Geumgang"             # poomsae Geumgang (2e dan)
+    hangul: "금강"
+  - latin: "Taebaek"              # poomsae Taebaek (3e dan)
+    hangul: "태백"
+  - latin: "Pyeongwon"            # poomsae Pyeongwon (4e dan)
+    hangul: "평원"
+  - latin: "Sipjin"               # poomsae Sipjin (5e dan)
+    hangul: "십진"
+  - latin: "Jitae"                # poomsae Jitae (6e dan)
+    hangul: "지태"
+  - latin: "Cheonkwon"            # poomsae Cheonkwon (7e dan)
+    hangul: "천권"
+  - latin: "Hansu"                # poomsae Hansu (8e dan)
+    hangul: "한수"
+  - latin: "Ilyeo"                # poomsae Ilyeo (9e dan)
+    hangul: "일여"
+
+  # ── Sparring / Combat ─────────────────────────────────────────────────────
+  - latin: "Gyeorugi"             # combat libre
+    hangul: "겨루기"
+  - latin: "Han Bon Gyeorugi"     # combat en un seul coup
+    hangul: "한번 겨루기"
+
+  # ── Self-Defence / Ho Sin Sul ─────────────────────────────────────────────
+  - latin: "Ho Sin Sul"           # techniques de self-défense
+    hangul: "호신술"
+
+  # ── Board Breaking / Gyeokpa ──────────────────────────────────────────────
+  - latin: "Gyeokpa"              # cassage de planches
+    hangul: "격파"

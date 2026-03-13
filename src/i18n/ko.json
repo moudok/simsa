@@ -1,0 +1,169 @@
+{
+  "app": {
+    "name": "심사",
+    "subtitle": "태권도 승급심사"
+  },
+  "roles": {
+    "title": "역할을 선택하세요 :",
+    "eleve": "수련생들",
+    "maitre": "시험 시작",
+    "eleveDesc": "승급심사 등록",
+    "maitreDesc": "채점 및 심사 관리"
+  },
+  "grades": {
+    "blanc": "백띠",
+    "jaune": "노랑띠",
+    "jaune+": "노랑띠 +",
+    "vert": "초록띠",
+    "vert+": "초록띠 +",
+    "bleu": "파랑띠",
+    "bleu+": "파랑띠 +",
+    "rouge": "빨강띠",
+    "rouge+": "빨강띠 +",
+    "rouge++": "빨강띠 ++",
+    "noir": "검은띠"
+  },
+  "genres": {
+    "homme": "남자",
+    "femme": "여자",
+    "autre": "기타",
+    "non_renseigne": "응답하지 않음",
+    "non_renseigne_short": "응답하지 않음"
+  },
+  "common": {
+    "back": "뒤로",
+    "cancel": "취소",
+    "confirm": "확인",
+    "confirmDelete": "삭제",
+    "save": "저장",
+    "delete": "삭제",
+    "next": "다음",
+    "previous": "이전"
+  },
+  "config": {
+    "title": "매개변수",
+    "epreuves": "시험 항목",
+    "epreuve": "항목",
+    "addEpreuve": "항목 추가",
+    "dureesChrono": "카운트다운 시간",
+    "addDuree": "시간 추가",
+    "seconds": "초",
+    "elevesParLigne": "한 줄당 수련생 수 (기본값)",
+    "resetDefaults": "기본값으로 초기화",
+    "confirmReset": "정말 기본 설정으로 초기화하시겠습니까?",
+    "exportYaml": "모두 내보내기 (YAML)",
+    "importYaml": "모두 가져오기 (YAML)",
+    "importYamlSuccess": "매개변수를 성공적으로 가져왔습니다",
+    "importYamlError": "유효하지 않은 YAML 파일",
+    "exportQR": "모두 내보내기 (QR)",
+    "scanQR": "모두 가져오기 (QR)",
+    "deleteStudents": "데이터 삭제",
+    "deleteStudentsHelp": "수련생 삭제를 확인하려면 슬라이드하세요",
+    "deleteStudentsDone": "수련생 데이터가 삭제되었습니다",
+    "deleteAll": "모든 데이터 삭제",
+    "deleteAllHelp": "모든 데이터 삭제를 확인하려면 슬라이드하세요",
+    "deleteAllDone": "모든 데이터가 삭제되었습니다"
+  },
+  "eleve": {
+    "title": "수련생 등록",
+    "register": "수련생 등록하기",
+    "scanQR": "수련생 QR 코드 스캔",
+    "prenom": "이름",
+    "nom": "성",
+    "grade": "급",
+    "anneeNaissance": "출생 연도",
+    "genre": "성별",
+    "binome": "파트너",
+    "binomePrenom": "파트너 이름 (선택)",
+    "binomeNom": "파트너 성",
+    "rgpdText": "본인의 데이터(이름, 성, 급, 출생 연도, 성별)는 이 승급심사를 위해 사범의 기기에 로컬로 저장됩니다. 법적 근거: 계약 이행. 인터넷으로 전송되지 않습니다. 데이터 관리 책임자: 총괄 사범. 심사 종료 후 삭제됩니다.",
+    "rgpdLabel": "읽었으며 동의합니다",
+    "submit": "OK",
+    "qrTitle": "이 QR 코드를 사범에게 보여주세요",
+    "newInscription": "새 등록",
+    "deleteQR": "삭제",
+    "deleteAllQR": "모두 삭제",
+    "confirmDeleteAll": "모든 QR 코드를 삭제하시겠습니까?",
+    "edit": "수정",
+    "editTitle": "수련생 수정",
+    "editSuccess": "수련생이 수정되었습니다"
+  },
+  "maitre": {
+    "title": "사범 공간"
+  },
+  "session": {
+    "create": "세션 만들기",
+    "name": "세션 이름",
+    "namePlaceholder": "예: 2026년 3월 승급심사",
+    "date": "날짜",
+    "masterName": "사범 이름",
+    "masterNamePlaceholder": "예: 홍 사범",
+    "start": "세션 시작",
+    "scan": "수련생 스캔",
+    "students": "등록된 수련생",
+    "studentsCount": "명 등록",
+    "share": "설정 공유",
+    "shareTitle": "설정 QR 코드",
+    "noStudents": "아직 등록된 수련생이 없습니다.",
+    "invalidQR": "유효하지 않은 QR 코드입니다.",
+    "duplicateStudent": "이미 등록된 수련생입니다.",
+    "cameraError": "카메라에 접근할 수 없습니다.",
+    "pair": "짝",
+    "solo": "단독",
+    "years": "세",
+    "unmatchedTitle": "미매칭 파트너 요청",
+    "endSession": "세션 종료",
+    "confirmEnd": "정말 세션을 종료하시겠습니까? 모든 데이터가 삭제됩니다."
+  },
+  "notation": {
+    "title": "채점",
+    "noStudents": "등록된 수련생이 없습니다. 시험을 시작하기 전에 수련생을 등록하거나 스캔하세요.",
+    "filters": "필터",
+    "perRow": "한 줄"
+  },
+  "results": {
+    "title": "결과",
+    "desc": "결과 표",
+    "exportPdf": "PDF로 내보내기",
+    "noData": "표시할 데이터가 없습니다.",
+    "verdict": "합격"
+  },
+  "chrono": {
+    "session": "세션",
+    "stop": "정지"
+  },
+  "manual": {
+    "title": "사용 설명서",
+    "link": "사용 설명서"
+  },
+  "exchange": {
+    "title": "데이터 교환",
+    "desc": "가져오기 / 내보내기 (YAML, QR)",
+    "importQR": "QR 코드 가져오기",
+    "importSection": "가져오기",
+    "exportSection": "내보내기",
+    "resultsSection": "심사위원 결과",
+    "exportResults": "결과 내보내기 (QR)",
+    "importResults": "결과 가져오기 (QR)",
+    "juryName": "심사위원 이름",
+    "juryNamePlaceholder": "예: Marie",
+    "generateQR": "QR 코드 생성",
+    "noResults": "내보낼 채점이나 결과가 없습니다.",
+    "importResultsSuccess": "결과를 가져왔습니다",
+    "hashWarningTitle": "데이터 불일치",
+    "missingStudents": "누락된 수련생 (IDs) :",
+    "extraStudents": "추가된 수련생 (IDs) :",
+    "missingEpreuves": "누락된 항목 (IDs) :",
+    "extraEpreuves": "추가된 항목 (IDs) :",
+    "hashUnknownError": "원인 불명의 검증 오류.",
+    "importAnyway": "그래도 가져오기",
+    "exportStudents": "수련생 내보내기 (QR)",
+    "importStudents": "수련생 가져오기 (QR)",
+    "importStudentsSuccess": "수련생을 성공적으로 가져왔습니다"
+  },
+  "home": {
+    "demo": "데모 데이터",
+    "demoConfirm": "가상 수련생 32명을 추가하시겠습니까?",
+    "demoLoaded": "가상 수련생이 등록되었습니다!"
+  }
+}

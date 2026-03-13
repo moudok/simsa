@@ -1,0 +1,169 @@
+{
+  "app": {
+    "name": "Simsa",
+    "subtitle": "Passage de grades de taekwondo"
+  },
+  "roles": {
+    "title": "Sélectionnez votre rôle :",
+    "eleve": "Élèves",
+    "maitre": "Démarrer l'examen",
+    "eleveDesc": "Inscription au passage de grades",
+    "maitreDesc": "Notation et gestion de la session"
+  },
+  "grades": {
+    "blanc": "Blanc",
+    "jaune": "Jaune",
+    "jaune+": "Jaune +",
+    "vert": "Vert",
+    "vert+": "Vert +",
+    "bleu": "Bleu",
+    "bleu+": "Bleu +",
+    "rouge": "Rouge",
+    "rouge+": "Rouge +",
+    "rouge++": "Rouge ++",
+    "noir": "Noir"
+  },
+  "genres": {
+    "homme": "Homme",
+    "femme": "Femme",
+    "autre": "Autre",
+    "non_renseigne": "Ne souhaite pas répondre",
+    "non_renseigne_short": "NSPR"
+  },
+  "common": {
+    "back": "Retour",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "confirmDelete": "Supprimer",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "next": "Suivant",
+    "previous": "Précédent"
+  },
+  "config": {
+    "title": "Paramètres",
+    "epreuves": "Épreuves",
+    "epreuve": "Épreuve",
+    "addEpreuve": "Ajouter une épreuve",
+    "dureesChrono": "Durées du compte à rebours",
+    "addDuree": "Ajouter une durée",
+    "seconds": "Secondes",
+    "elevesParLigne": "Élèves par rangée (par défaut)",
+    "resetDefaults": "Réinitialiser les valeurs par défaut",
+    "confirmReset": "Voulez-vous vraiment réinitialiser la configuration par défaut ?",
+    "exportYaml": "Tout exporter (YAML)",
+    "importYaml": "Tout importer (YAML)",
+    "importYamlSuccess": "Paramètres importés avec succès",
+    "importYamlError": "Fichier YAML invalide",
+    "exportQR": "Tout exporter (QR)",
+    "scanQR": "Tout importer (QR)",
+    "deleteStudents": "Supprimer les données",
+    "deleteStudentsHelp": "Glissez pour confirmer la suppression des élèves",
+    "deleteStudentsDone": "Données élèves supprimées",
+    "deleteAll": "Supprimer toutes les données",
+    "deleteAllHelp": "Glissez pour confirmer la suppression de toutes les données",
+    "deleteAllDone": "Toutes les données supprimées"
+  },
+  "eleve": {
+    "title": "Inscription élève",
+    "register": "Inscrire des élèves",
+    "scanQR": "Scanner des QR codes élèves",
+    "prenom": "Prénom",
+    "nom": "Nom",
+    "grade": "Grade",
+    "anneeNaissance": "Année de naissance",
+    "genre": "Genre",
+    "binome": "Binôme",
+    "binomePrenom": "Prénom du binôme (facultatif)",
+    "binomeNom": "Nom du binôme",
+    "rgpdText": "Mes données (prénom, nom, grade, année de naissance, genre) sont enregistrées localement sur l'appareil du Maître dans le cadre de ce passage de grades. Base légale : exécution du contrat (article 6(1)(b) du RGPD). Elles ne sont pas transmises sur internet. Responsable du traitement : le Maître. Elles seront supprimées à l'issue du passage.",
+    "rgpdLabel": "J'ai lu et j'accepte",
+    "submit": "OK",
+    "qrTitle": "Présentez ce QR code au Maître",
+    "newInscription": "Nouvelle inscription",
+    "deleteQR": "Supprimer",
+    "deleteAllQR": "Tout supprimer",
+    "confirmDeleteAll": "Supprimer tous les QR codes ?",
+    "edit": "Modifier",
+    "editTitle": "Modifier l'élève",
+    "editSuccess": "Élève modifié"
+  },
+  "maitre": {
+    "title": "Espace Maître"
+  },
+  "session": {
+    "create": "Créer une session",
+    "name": "Nom de la session",
+    "namePlaceholder": "Ex : Passage de grades Mars 2026",
+    "date": "Date",
+    "masterName": "Nom du Maître",
+    "masterNamePlaceholder": "Ex : Maître Hong",
+    "start": "Démarrer la session",
+    "scan": "Scanner les élèves",
+    "students": "Élèves inscrits",
+    "studentsCount": "élève(s) inscrit(s)",
+    "share": "Partager la config",
+    "shareTitle": "QR code de configuration",
+    "noStudents": "Aucun élève inscrit pour le moment.",
+    "invalidQR": "QR code invalide ou non reconnu.",
+    "duplicateStudent": "Cet élève est déjà inscrit.",
+    "cameraError": "Impossible d'accéder à la caméra.",
+    "pair": "Binôme",
+    "solo": "Solo",
+    "years": "ans",
+    "unmatchedTitle": "Demandes de binôme non satisfaites",
+    "endSession": "Terminer la session",
+    "confirmEnd": "Voulez-vous vraiment terminer la session ? Toutes les données seront supprimées."
+  },
+  "notation": {
+    "title": "Notation",
+    "noStudents": "Aucun élève inscrit. Inscrivez ou scannez des élèves avant de démarrer l'examen.",
+    "filters": "Filtres",
+    "perRow": "Par rangée"
+  },
+  "results": {
+    "title": "Résultats",
+    "desc": "Tableau des résultats",
+    "exportPdf": "Exporter en PDF",
+    "noData": "Aucune donnée à afficher.",
+    "verdict": "Validé"
+  },
+  "chrono": {
+    "session": "Session",
+    "stop": "Stop"
+  },
+  "manual": {
+    "title": "Manuel d'utilisation",
+    "link": "Manuel d'utilisation"
+  },
+  "exchange": {
+    "title": "Échange de données",
+    "desc": "Import / Export (YAML, QR)",
+    "importQR": "Importer des QR codes",
+    "importSection": "Importer",
+    "exportSection": "Exporter",
+    "resultsSection": "Résultats du jury",
+    "exportResults": "Exporter les résultats (QR)",
+    "importResults": "Importer les résultats (QR)",
+    "juryName": "Nom du jury",
+    "juryNamePlaceholder": "Ex : Soo-Jin",
+    "generateQR": "Générer le QR code",
+    "noResults": "Aucune note ni résultat à exporter.",
+    "importResultsSuccess": "Résultats importés",
+    "hashWarningTitle": "Données incompatibles",
+    "missingStudents": "Élèves manquants (IDs) :",
+    "extraStudents": "Élèves en trop (IDs) :",
+    "missingEpreuves": "Épreuves manquantes (IDs) :",
+    "extraEpreuves": "Épreuves en trop (IDs) :",
+    "hashUnknownError": "Erreur de vérification d'origine inconnue.",
+    "importAnyway": "Importer quand même",
+    "exportStudents": "Exporter les élèves (QR)",
+    "importStudents": "Importer des élèves (QR)",
+    "importStudentsSuccess": "Élèves importés avec succès"
+  },
+  "home": {
+    "demo": "Données de démonstration",
+    "demoConfirm": "Ajouter 32 élèves fictifs ?",
+    "demoLoaded": "Élèves fictifs chargés !"
+  }
+}
