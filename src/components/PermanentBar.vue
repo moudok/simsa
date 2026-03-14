@@ -74,10 +74,11 @@ function startCountdown(seconds: number) {
   chronoStore.startCountdown(seconds)
 }
 
-// Beep when countdown reaches 0
+// Beep and vibrate when countdown reaches 0
 watch(() => chronoStore.countdownRemaining, (val, oldVal) => {
   if (oldVal === 1 && val === 0) {
     playEndMelody()
+    if (navigator.vibrate) navigator.vibrate([200, 100, 200, 100, 200])
   }
 })
 

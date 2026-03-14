@@ -24,7 +24,7 @@ L'application permet de noter les performances des élèves en leur attribuant d
 
 ## Installation
 
-Simsa est une application web progressive (PWA). Elle s'utilise directement dans le navigateur, mais peut aussi être installée pour un accès rapide et un fonctionnement hors ligne.
+Simsa est une application web progressive (PWA). Elle s'utilise directement dans le navigateur, mais on recommande de l'installer pour un accès rapide et un fonctionnement hors ligne.
 
 ### Android (Chrome)
 
@@ -113,7 +113,7 @@ Le bouton de téléchargement (en haut à droite, à côté du menu) génère un
 La barre permanente en bas de l'écran affiche :
 - L'**heure courante**
 - La **durée de la session** depuis le lancement
-- Le **compte à rebours** : appuyer sur une durée (30s, 1', etc.) pour le lancer. Boutons pause ⏸ et stop disponibles. Un bip sonore retentit à la fin.
+- Le **compte à rebours** : appuyer sur une durée (30s, 1', etc.) pour le lancer. Boutons pause ⏸ et stop disponibles. Un bip sonore retentit et le téléphone vibre à la fin.
 
 ---
 
@@ -136,13 +136,13 @@ Accessible depuis le bouton **Échange de données** sur la page d'accueil :
 | Fonction | Description |
 |---|---|
 | **Importer des QR codes** | Scanner universel qui détecte automatiquement le type de QR code : inscription élève, lot d'élèves, configuration complète ou résultats du jury. Les doublons sont ignorés. En cas de divergence sur les résultats (élèves ou épreuves en plus/en moins), un avertissement détaillé est affiché. |
-| **Tout importer (YAML)** | Restaure la configuration depuis un fichier YAML (écrase les données existantes) |
+| **Importer la base (YAML)** | Restaure la configuration depuis un fichier YAML (écrase les données existantes) |
 
 ### Exporter
 
 | Fonction | Description |
 |---|---|
-| **Tout exporter (YAML)** | Télécharge un fichier YAML contenant les épreuves, paramètres et élèves |
+| **Exporter la base (YAML)** | Télécharge un fichier YAML contenant les épreuves, paramètres, élèves et notes |
 | **Tout exporter (QR)** | Affiche un ou plusieurs QR codes contenant la configuration complète et les élèves |
 | **Exporter les élèves (QR)** | Exporte uniquement la liste des élèves en QR code |
 | **Exporter les résultats (QR)** | Le jury saisit son nom, puis génère un QR code contenant ses notes et verdicts. Un hash des élèves et épreuves est inclus pour vérification d'intégrité. |
@@ -176,12 +176,15 @@ Ces paramètres sont conservés même après la suppression des données des él
 
 ---
 
-## Protection des données (RGPD)
+## Données personnelles
+
+Simsa traite des données à caractère personnel (prénom, nom, grade, année de naissance, genre) dans le cadre de l'exécution du contrat (article 6(1)(b) du RGPD). Conformément à la loi n°78-17 du 6 janvier 1978 modifiée (loi Informatique et Libertés) et au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de modification et de suppression des données vous concernant.
 
 - Les données ne quittent **jamais** l'appareil
 - Seule l'**année de naissance** est collectée (pas la date de naissance complète)
 - Les données de session (élèves et notes) peuvent être supprimées à tout moment
 - Les paramètres (épreuves) sont conservés séparément
+- Responsable du traitement : le Maître
 - **Aucune télémétrie** n'est effectuée lorsque l'application est installée sur un appareil. Un suivi analytique anonyme (sans cookies, respectant Do Not Track) peut être actif uniquement lors de la consultation via un navigateur web
 
 ---

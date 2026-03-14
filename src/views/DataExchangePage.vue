@@ -65,7 +65,7 @@ import { useConfigStore } from '@/stores/config'
 import { useStudentsStore } from '@/stores/students'
 import { useNotesStore } from '@/stores/notes'
 import { APP_VERSION } from '@/utils/version'
-import type { Epreuve, Eleve } from '@/types'
+import type { Epreuve, Eleve, Note, JuryVerdict } from '@/types'
 
 const { t } = useI18n()
 const configStore = useConfigStore()
@@ -86,6 +86,19 @@ function exportYaml() {
       id: e.id, prenom: e.prenom, nom: e.nom, grade: e.grade,
       anneeNaissance: e.anneeNaissance, genre: e.genre,
       ...(e.binomePrenom ? { binomePrenom: e.binomePrenom, binomeNom: e.binomeNom } : {}),
+    }))
+  }
+  if (notesStore.notes.length > 0) {
+    data.notes = notesStore.notes.map(n => ({
+      jury: n.jury, eleveId: n.eleveId, epreuveId: n.epreuveId, plus: n.plus, moins: n.moins,
+    }))
+  }
+  if (Object.keys(studentsStore.verdicts).length > 0) {
+    data.verdicts = { ...studentsStore.verdicts }
+  }
+  if (notesStore.juryVerdicts.length > 0) {
+    data.juryVerdicts = notesStore.juryVerdicts.map(v => ({
+      jury: v.jury, eleveId: v.eleveId, valide: v.valide,
     }))
   }
   const yamlStr = yaml.dump(data, { lineWidth: -1 })
@@ -127,7 +140,27 @@ async function onFileImport(event: Event) {
     }
     if (Array.isArray(data.eleves)) {
       for (const e of data.eleves as Eleve[]) {
-        studentsStore.add({ prenom: e.prenom, nom: e.nom, grade: e.grade, anneeNaissance: e.anneeNaissance, genre: e.genre, consentementRGPD: true, binomePrenom: e.binomePrenom, binomeNom: e.binomeNom })
+        studentsStore.eleves.push({
+          id: e.id, prenom: e.prenom, nom: e.nom, grade: e.grade,
+          anneeNaissance: e.anneeNaissance, genre: e.genre, consentementRGPD: true,
+          binomePrenom: e.binomePrenom, binomeNom: e.binomeNom,
+        })
+      }
+    }
+    if (Array.isArray(data.notes)) {
+      for (const n of data.notes as Note[]) {
+        notesStore.notes.push({ jury: n.jury, eleveId: n.eleveId, epreuveId: n.epreuveId, plus: n.plus, moins: n.moins })
+      }
+    }
+    if (data.verdicts && typeof data.verdicts === 'object') {
+      const vd = data.verdicts as Record<string, string>
+      for (const [k, v] of Object.entries(vd)) {
+        studentsStore.verdicts[Number(k)] = v as 'pending' | 'passed' | 'failed'
+      }
+    }
+    if (Array.isArray(data.juryVerdicts)) {
+      for (const v of data.juryVerdicts as JuryVerdict[]) {
+        notesStore.juryVerdicts.push({ jury: v.jury, eleveId: v.eleveId, valide: v.valide })
       }
     }
     const toast = await toastController.create({

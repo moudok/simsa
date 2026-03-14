@@ -93,8 +93,8 @@ export function exportResultsPdf(options: ExportOptions) {
     row.push(v === 'passed' ? 'V' : v === 'failed' ? 'X' : '')
     body.push(row)
 
-    // Jury sub-rows
-    const juries = getJuriesForEleve(eleve.id)
+    // Jury sub-rows (skip "Maître" — already in the main row)
+    const juries = getJuriesForEleve(eleve.id).filter(j => j !== 'Maître')
     for (const jury of juries) {
       juryRowIndices.add(body.length)
       rowStudentIndex.set(body.length, studentIdx)

@@ -162,6 +162,7 @@ function getJuriesForEleve(eleveId: number): string[] {
   for (const v of notesStore.juryVerdicts) {
     if (v.eleveId === eleveId) names.add(v.jury)
   }
+  names.delete('Maître')
   return [...names]
 }
 
