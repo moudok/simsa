@@ -2,12 +2,12 @@ import { defineStore } from 'pinia'
 import { ref, computed, reactive, watch, toRaw } from 'vue'
 import type { Eleve, Grade } from '@/types'
 import { getDB } from '@/utils/db'
+import { useNotesStore } from '@/stores/notes'
 
 const DB_KEY = 'students'
 
 export const useStudentsStore = defineStore('students', () => {
   const eleves = ref<Eleve[]>([])
-  const qrMap = reactive<Record<number, string>>({})
   const verdicts = reactive<Record<number, 'pending' | 'passed' | 'failed'>>({})
 
   const loaded = ref(false)
@@ -50,10 +50,6 @@ export const useStudentsStore = defineStore('students', () => {
     return newEleve
   }
 
-  function setQR(id: number, dataURL: string) {
-    qrMap[id] = dataURL
-  }
-
   function cycleVerdict(id: number) {
     const current = verdicts[id] ?? 'pending'
     if (current === 'pending') verdicts[id] = 'passed'
@@ -63,8 +59,8 @@ export const useStudentsStore = defineStore('students', () => {
 
   function remove(id: number) {
     eleves.value = eleves.value.filter(e => e.id !== id)
-    delete qrMap[id]
     delete verdicts[id]
+    useNotesStore().removeForEleve(id)
   }
 
   function update(eleve: Eleve) {
@@ -84,20 +80,18 @@ export const useStudentsStore = defineStore('students', () => {
 
   async function clear() {
     eleves.value = []
-    Object.keys(qrMap).forEach(k => delete qrMap[Number(k)])
     Object.keys(verdicts).forEach(k => delete verdicts[Number(k)])
+    await useNotesStore().clear()
     const db = await getDB()
     await db.delete('session', DB_KEY)
   }
 
   return {
     eleves,
-    qrMap,
     verdicts,
     nextId,
     loaded,
     add,
-    setQR,
     cycleVerdict,
     remove,
     update,

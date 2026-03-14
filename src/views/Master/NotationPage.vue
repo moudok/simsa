@@ -65,8 +65,6 @@ import { useI18n } from 'vue-i18n'
 import { useEventsStore } from '@/stores/events'
 import { useStudentsStore } from '@/stores/students'
 import { generateDemoStudents } from '@/utils/demo'
-import { generateQRDataURL, buildInscriptionPayload } from '@/composables/useQR'
-
 import PermanentBar from '@/components/PermanentBar.vue'
 import NotationView from '@/components/NotationView.vue'
 
@@ -92,11 +90,7 @@ async function confirmLoadDemo() {
 async function loadDemo() {
   const students = generateDemoStudents()
   for (const student of students) {
-    const newEleve = studentsStore.add(student)
-    const { id: _, ...payloadData } = newEleve
-    const payload = buildInscriptionPayload(payloadData)
-    const qr = await generateQRDataURL(payload)
-    studentsStore.setQR(newEleve.id, qr)
+    studentsStore.add(student)
   }
   const toast = await toastController.create({
     message: `${students.length} ${t('home.demoLoaded')}`,

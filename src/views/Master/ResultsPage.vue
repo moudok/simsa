@@ -31,7 +31,7 @@
       </div>
     </ion-header>
 
-    <ion-content>
+    <ion-content :scroll-y="false">
       <div v-if="filteredStudents.length === 0" class="empty-state">
         <p>{{ t('results.noData') }}</p>
       </div>
@@ -239,7 +239,8 @@ function exportPdf() {
 }
 
 .table-wrapper {
-  overflow-x: auto;
+  overflow: auto;
+  height: 100%;
   padding: 0;
 }
 
@@ -262,6 +263,10 @@ function exportPdf() {
   font-size: 0.7rem;
   font-weight: 600;
   white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #3c3c3c;
 }
 
 .results-table td {
@@ -285,7 +290,7 @@ function exportPdf() {
 }
 
 thead .col-prenom {
-  z-index: 2;
+  z-index: 3;
   background: #3c3c3c;
 }
 
@@ -329,7 +334,7 @@ thead .col-prenom {
 }
 
 thead .col-verdict {
-  z-index: 2;
+  z-index: 3;
   background: #3c3c3c;
 }
 

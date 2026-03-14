@@ -128,10 +128,10 @@
           @touchstart="onTouchStart"
           @touchend="onTouchEnd"
         >
-          <!-- QR code if available -->
-          <div v-if="studentsStore.qrMap[activeEleve.id]" class="qr-display">
+          <!-- QR code -->
+          <div v-if="activeQR" class="qr-display">
             <h2>{{ t('eleve.qrTitle') }}</h2>
-            <img :src="studentsStore.qrMap[activeEleve.id]" alt="QR Code" class="qr-image" />
+            <img :src="activeQR" alt="QR Code" class="qr-image" />
           </div>
 
           <p class="student-summary">
@@ -166,7 +166,7 @@ import {
   alertController, toastController,
 } from '@ionic/vue'
 import { addOutline } from 'ionicons/icons'
-import { ref, reactive, computed, onMounted } from 'vue'
+import { ref, reactive, computed, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 import type { Grade, Genre, ElevePayload } from '@/types'
@@ -190,6 +190,15 @@ const activeIndex = computed(() => {
   if (!activeEleve.value) return -1
   return studentsStore.eleves.findIndex(e => e.id === activeEleve.value!.id)
 })
+
+// Generate QR on the fly when active student changes
+const activeQR = ref<string | null>(null)
+
+watch(activeEleve, async (eleve) => {
+  if (!eleve) { activeQR.value = null; return }
+  const { id: _, ...data } = eleve
+  activeQR.value = await generateQRDataURL(buildInscriptionPayload(data))
+}, { immediate: true })
 
 const form = reactive({
   prenom: '',
@@ -230,12 +239,8 @@ async function submit() {
 
   if (editingId.value !== null) {
     // Update existing student
-    const updated = { ...data, id: editingId.value }
-    studentsStore.update(updated)
-    const { id: _, ...payloadData } = updated
-    const qr = await generateQRDataURL(buildInscriptionPayload(payloadData))
-    studentsStore.setQR(updated.id, qr)
-    activeTab.value = updated.id
+    studentsStore.update({ ...data, id: editingId.value })
+    activeTab.value = editingId.value
     editingId.value = null
     const toast = await toastController.create({
       message: t('eleve.editSuccess'),
@@ -244,10 +249,7 @@ async function submit() {
     await toast.present()
   } else {
     // Create new student
-    const payload = buildInscriptionPayload(data)
-    const qr = await generateQRDataURL(payload)
     const newEleve = studentsStore.add(data)
-    studentsStore.setQR(newEleve.id, qr)
     activeTab.value = newEleve.id
   }
 

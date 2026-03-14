@@ -56,7 +56,6 @@ import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStudentsStore } from '@/stores/students'
 import { generateDemoStudents } from '@/utils/demo'
-import { generateQRDataURL, buildInscriptionPayload } from '@/composables/useQR'
 import SlideConfirm from '@/components/SlideConfirm.vue'
 
 const { t } = useI18n()
@@ -90,11 +89,7 @@ async function deleteStudents() {
 async function loadDemo() {
   const students = generateDemoStudents()
   for (const student of students) {
-    const newEleve = studentsStore.add(student)
-    const { id: _, ...payloadData } = newEleve
-    const payload = buildInscriptionPayload(payloadData)
-    const qr = await generateQRDataURL(payload)
-    studentsStore.setQR(newEleve.id, qr)
+    studentsStore.add(student)
   }
   const toast = await toastController.create({
     message: `${students.length} ${t('home.demoLoaded')}`,

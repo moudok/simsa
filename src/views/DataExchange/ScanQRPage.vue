@@ -66,7 +66,7 @@ import { useConfigStore } from '@/stores/config'
 import { useStudentsStore } from '@/stores/students'
 import { useNotesStore } from '@/stores/notes'
 import { useQRScanner } from '@/composables/useQRScanner'
-import { decodeQRPayload, parseChunk, reassembleChunks, buildInscriptionPayload, generateQRDataURL } from '@/composables/useQR'
+import { decodeQRPayload, parseChunk, reassembleChunks } from '@/composables/useQR'
 import { checkVersionCompatibility } from '@/utils/version'
 import { computeDataHash } from '@/utils/hash'
 import type { QRPayload, ElevePayload, StudentsPayload, ParamsPayload, ResultsPayload } from '@/types'
@@ -122,16 +122,13 @@ function isDuplicate(e: ElevePayload): boolean {
   )
 }
 
-async function addStudent(e: ElevePayload): Promise<boolean> {
+function addStudent(e: ElevePayload): boolean {
   if (isDuplicate(e)) return false
-  const student = studentsStore.add({
+  studentsStore.add({
     prenom: e.prenom, nom: e.nom, grade: e.grade,
     anneeNaissance: e.anneeNaissance, genre: e.genre, consentementRGPD: true,
     binomePrenom: e.binomePrenom, binomeNom: e.binomeNom,
   })
-  const { id: _, ...payloadData } = student
-  const qr = await generateQRDataURL(buildInscriptionPayload(payloadData))
-  studentsStore.setQR(student.id, qr)
   return true
 }
 

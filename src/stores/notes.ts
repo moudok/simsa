@@ -124,6 +124,11 @@ export const useNotesStore = defineStore('notes', () => {
     return [...names]
   }
 
+  function removeForEleve(eleveId: number) {
+    notes.value = notes.value.filter(n => n.eleveId !== eleveId)
+    juryVerdicts.value = juryVerdicts.value.filter(v => v.eleveId !== eleveId)
+  }
+
   async function clear() {
     notes.value = []
     juryVerdicts.value = []
@@ -146,6 +151,7 @@ export const useNotesStore = defineStore('notes', () => {
     mergeJuryVerdicts,
     getJuryVerdictsForEleve,
     getJuryNames,
+    removeForEleve,
     clear,
     loadFromDB,
   }

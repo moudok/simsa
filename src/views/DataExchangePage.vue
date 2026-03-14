@@ -65,7 +65,6 @@ import { useConfigStore } from '@/stores/config'
 import { useStudentsStore } from '@/stores/students'
 import { useNotesStore } from '@/stores/notes'
 import { APP_VERSION } from '@/utils/version'
-import { buildInscriptionPayload, generateQRDataURL } from '@/composables/useQR'
 import type { Epreuve, Eleve } from '@/types'
 
 const { t } = useI18n()
@@ -128,10 +127,7 @@ async function onFileImport(event: Event) {
     }
     if (Array.isArray(data.eleves)) {
       for (const e of data.eleves as Eleve[]) {
-        const student = studentsStore.add({ prenom: e.prenom, nom: e.nom, grade: e.grade, anneeNaissance: e.anneeNaissance, genre: e.genre, consentementRGPD: true, binomePrenom: e.binomePrenom, binomeNom: e.binomeNom })
-        const { id: _, ...payloadData } = student
-        const qr = await generateQRDataURL(buildInscriptionPayload(payloadData))
-        studentsStore.setQR(student.id, qr)
+        studentsStore.add({ prenom: e.prenom, nom: e.nom, grade: e.grade, anneeNaissance: e.anneeNaissance, genre: e.genre, consentementRGPD: true, binomePrenom: e.binomePrenom, binomeNom: e.binomeNom })
       }
     }
     const toast = await toastController.create({
