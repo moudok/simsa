@@ -62,7 +62,7 @@
             <span class="student-name">{{ eleve.prenom }}</span>
             <span class="student-lastname">{{ eleve.nom }}</span>
           </div>
-          <span class="card-meta meta-right">{{ eleve.anneeNaissance }}</span>
+          <span class="card-meta meta-right">'{{ String(eleve.anneeNaissance).slice(-2) }}</span>
         </div>
         <div v-if="visibleIds.has(eleve.id) && eventsStore.currentEpreuveId !== null" class="card-notes" @click.stop>
           <button
@@ -546,8 +546,8 @@ defineExpose({ currentEpreuveLabel, canGoPrev, canGoNext, toggleMenu })
 
 .card-meta {
   position: absolute;
-  top: 0;
-  font-size: 0.85rem;
+  top: -2px;
+  font-size: 0.6rem;
   color: var(--ion-color-medium, #999);
   z-index: 1;
 }
@@ -658,7 +658,7 @@ defineExpose({ currentEpreuveLabel, canGoPrev, canGoNext, toggleMenu })
   }
 
   .card-meta {
-    font-size: 0.65rem;
+    font-size: 0.5rem;
   }
 
   .student-name {
